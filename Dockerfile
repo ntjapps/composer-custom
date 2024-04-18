@@ -2,7 +2,7 @@ FROM composer:latest
 
 # Install Postgres Database Extension and PECL Redis extension
 RUN apk --no-cache update && apk --no-cache upgrade && \
-    apk --no-cache add pcre-dev zlib-dev ${PHPIZE_DEPS} && \
+    apk --no-cache add pcre-dev zlib-dev libmemcached-dev ${PHPIZE_DEPS} && \
     pecl install redis memcached && \
     docker-php-ext-enable redis memcached && \
     apk --no-cache add postgresql-dev && \
