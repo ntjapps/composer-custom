@@ -17,7 +17,7 @@ env:
   REGISTRY1: ghcr.io
   REGISTRY2: docker.io
   IMAGE_NAME1: ${{ github.repository }}
-  IMAGE_NAME2: ${{ secrets.DOCKERHUB_REPO }}
+  IMAGE_NAME2: ${{ vars.DOCKERHUB_REPO }}
 
 jobs:
   cleanup-untagged-images:
