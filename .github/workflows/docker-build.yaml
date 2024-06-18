@@ -61,7 +61,7 @@ jobs:
           images: ${{ env.REGISTRY1 }}/${{ env.IMAGE_NAME1 }}
       - name: Build & Push
         id: build-and-push-packages
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
@@ -97,7 +97,7 @@ jobs:
           images: ${{ env.REGISTRY2 }}/${{ env.IMAGE_NAME2 }}
       - name: Build & Push
         id: build-and-push-packages
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
