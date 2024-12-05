@@ -68,8 +68,8 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta-packages.outputs.tags }}
           labels: ${{ steps.meta-packages.outputs.labels }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          cache-from: type=registry,ref=ghcr.io/${{ github.repository }}:buildcache
+          cache-to: type=registry,ref=ghcr.io/${{ github.repository }}:buildcache,mode=max
 
   build-docker:
     if: ${{ github.event_name != 'pull_request' }}
@@ -104,5 +104,5 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta-packages.outputs.tags }}
           labels: ${{ steps.meta-packages.outputs.labels }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          cache-from: type=registry,ref=docker.io/${{ github.repository }}:buildcache
+          cache-to: type=registry,ref=docker.io/${{ github.repository }}:buildcache,mode=max
