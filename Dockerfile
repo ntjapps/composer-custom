@@ -7,7 +7,8 @@ RUN apk --no-cache update && apk --no-cache upgrade && \
     docker-php-ext-enable redis memcached && \
     apk --no-cache add postgresql-dev && \
     docker-php-ext-install pdo_pgsql && \
-    apk del pcre-dev ${PHPIZE_DEPS}
+    apk del pcre-dev ${PHPIZE_DEPS} && \
+    composer global require laravel/installer
 
 # Check composer version as a test
 RUN composer --version
