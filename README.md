@@ -6,7 +6,7 @@ This container help in Laravel Telescope error
 
 # LICENSE
 
-License can be read in [LICENSE](https://github.com/ntj125app/composer-custom/blob/latest/LICENSE)
+License can be read in [LICENSE](https://github.com/ntjapps/composer-custom/blob/latest/LICENSE)
 
 # UPDATE
 
