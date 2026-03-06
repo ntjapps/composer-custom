@@ -41,7 +41,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Get & Set Container Metadata
         id: meta-packages
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: ${{ env.REGISTRY1 }}/${{ env.IMAGE_NAME1 }}
       - name: Build & Push
