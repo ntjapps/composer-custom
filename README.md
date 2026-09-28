@@ -10,4 +10,4 @@ License can be read in [LICENSE](https://github.com/ntjapps/composer-custom/blob
 
 # UPDATE
 
-3 Feb 2026
+28 Sep 2026
