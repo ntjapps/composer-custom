@@ -1,6 +1,6 @@
 # Base pinned by digest (multi-arch index): `docker buildx imagetools inspect composer:latest`, copy the top-level "Digest:".
 # Dependabot (docker, target dev) opens a PR when the digest moves. PECL extensions and the Laravel installer are version-pinned.
-FROM composer:latest@sha256:ca11f643d7791ebdd90a34fc20caf11380d434007ae539a9ea75cd9212e13dca
+FROM composer:latest@sha256:0c8e663f14c94d07b3c45b175c51f5a14718508f21fe4dd7e54f09488dd0ed71
 
 # Install Postgres Database Extension and PECL Redis extension
 RUN apk --no-cache update && apk --no-cache upgrade && \
